@@ -28,7 +28,7 @@ RegisterNumber: 212224040016
 
 
 ## SOURCE CODE:
-```
+```java
 import java.util.*;
 public class demo
 {
