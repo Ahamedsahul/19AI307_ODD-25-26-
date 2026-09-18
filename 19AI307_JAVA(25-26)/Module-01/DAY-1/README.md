@@ -44,15 +44,13 @@ To write a Java program that reads two integer numbers from the user and perform
 
 ## PROGRAM:
  ```
-/*
 Program to implement variables and Operators using Java
 Developed by: MUKESH R
 RegisterNumber: 212223240100
-*/
 ```
 
 ## Sourcecode.java:
-```
+```java
 import java.util.Scanner;
 
 public class ArithmeticOperations {
