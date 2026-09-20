@@ -28,7 +28,7 @@ To define a class Car with attributes brand, color, and year; create two objects
 
 ## PROGRAM:
  ```
-Program to implement variables and Operators using Java
+Program to implement a Class and Objects using Java
 Developed by: Ahamed Sahul Hameed M
 RegisterNumber: 212224040016
 ```
