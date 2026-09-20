@@ -30,7 +30,7 @@ To create an Employee class where the display() method returns the current objec
 
 ## PROGRAM:
 ```
-Program to implement variables and Operators using Java
+Program to implement a Access Modifiers using Java
 Developed by: Ahamed Sahul Hameed M
 RegisterNumber: 212224040016
 ```
