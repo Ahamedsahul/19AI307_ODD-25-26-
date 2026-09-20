@@ -23,7 +23,7 @@ To write a Java program that reads an integer from the user and displays all the
 ## PROGRAM:
  ```
 
-Program to implement variables and Operators using Java
+Program to implement a Looping Statement using Java
 Developed by: Ahamed Sahul Hameed M
 RegisterNumber: 212224040016
 
