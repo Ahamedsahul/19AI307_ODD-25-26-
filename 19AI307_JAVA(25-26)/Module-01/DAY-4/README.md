@@ -27,7 +27,7 @@ To write a Java program that reads an array of integers and finds the index of a
 
 ## PROGRAM:
  ```
-Program to implement variables and Operators using Java
+Program to implement a Array concept using Java
 Developed by: Ahamed Sahul Hameed M
 RegisterNumber: 212224040016
 ```
