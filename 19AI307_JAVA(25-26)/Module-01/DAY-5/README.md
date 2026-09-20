@@ -21,7 +21,7 @@ To write a Java program that finds the absolute value of a given number using th
 
 ## PROGRAM:
  ```
-Program to implement variables and Operators using Java
+Program to implement a Strings and Math Function using Java
 Developed by: Ahamed Sahul Hameed M
 RegisterNumber: 212224040016
 ```
