@@ -32,7 +32,7 @@ To write a Java program that initializes object variables using a constructor an
 
 ## PROGRAM:
  ```
-Program to implement variables and Operators using Java
+Program to implement a Variable scope and Constructor using Java
 Developed by: Ahamed Sahul Hameed M
 RegisterNumber: 212224040016
 ```
