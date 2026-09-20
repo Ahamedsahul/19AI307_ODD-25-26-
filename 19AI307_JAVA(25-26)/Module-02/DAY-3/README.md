@@ -36,7 +36,7 @@ To write a Java program that defines a class BankAccount with private attributes
 
 ## PROGRAM:
 ```
-Program to implement variables and Operators using Java
+Program to implement a Access Specifiers using Java
 Developed by: Ahamed Sahul Hameed M
 RegisterNumber: 212224040016
 ```
