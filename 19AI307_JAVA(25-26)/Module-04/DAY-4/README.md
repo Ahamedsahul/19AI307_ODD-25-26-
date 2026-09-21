@@ -7,22 +7,37 @@ Create a program that sends different types of notifications: "email", "sms", an
 To develop a Java program that uses the Factory Pattern to generate different types of notifications—Email, SMS, and Push—and call the appropriate notifyUser() method based on user input.
 
 ## ALGORITHM :
-Define a Notification interface with a method notifyUser().
-Implement three classes EmailNotification, SMSNotification, and PushNotification, each overriding notifyUser() with specific behavior.
-Define a NotificationFactory interface containing a method createNotification().
-Create an EmailFactory class implementing NotificationFactory that returns an EmailNotification object.
-Create an SMSFactory class implementing NotificationFactory that returns an SMSNotification object.
-Create a PushFactory class implementing NotificationFactory that returns a PushNotification object.
-In the main() method, read the notification type from the user.
-If the type is "email", create an EmailFactory object.
-If the type is "sms", create an SMSFactory object.
-If the type is "push", create a PushFactory object.
-If the input is "exit", terminate the loop.
-If the input is invalid, print an error message.
-Use the selected factory to create the appropriate Notification object.
-If the notification object is valid, call notifyUser().
-Continue reading input until "exit" is entered.
-Close the Scanner after exiting the loop.
+1. Define a Notification interface with a method notifyUser().
+
+2. Implement three classes EmailNotification, SMSNotification, and PushNotification, each overriding notifyUser() with specific behavior.
+
+3. Define a NotificationFactory interface with a method createNotification().
+
+4. Create an EmailFactory class implementing NotificationFactory that returns an EmailNotification object.
+
+5. Create an SMSFactory class implementing NotificationFactory that returns an SMSNotification object.
+
+6. Create a PushFactory class implementing NotificationFactory that returns a PushNotification object.
+
+7. Read the notification type from the user in a loop.
+
+8. If the input is "exit", terminate the loop.
+
+9. If the input is "email", create an EmailFactory object.
+
+10. If the input is "sms", create an SMSFactory object.
+
+11. If the input is "push", create a PushFactory object.
+
+12. If the input is invalid, print an error message.
+
+13. Use the selected factory to create the appropriate Notification object.
+
+14. If the Notification object is valid, call notifyUser().
+
+15. Continue reading user input until "exit" is entered.
+
+16. Close the Scanner after exiting the loop.
 
 
 
