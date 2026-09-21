@@ -7,29 +7,22 @@ Create a program that sends different types of notifications: "email", "sms", an
 To develop a Java program that uses the Factory Pattern to generate different types of notifications—Email, SMS, and Push—and call the appropriate notifyUser() method based on user input.
 
 ## ALGORITHM :
-1. Define a Notification interface with a method notifyUser().
-
-2. Implement three classes EmailNotification, SMSNotification, and PushNotification, each overriding notifyUser() with specific behavior.
-
-3. Create a NotificationFactory class containing a method createNotification(String type) that:
-
-4. Returns an EmailNotification object when type is "email".
-
-5. Returns an SMSNotification object when type is "sms".
-
-6. Returns a PushNotification object when type is "push".
-
-7. Returns null for invalid types.
-
-8. Create a NotificationFactory object.
-
-9. Read user input in a loop until "exit" is entered.
-
-10. Use the factory to create the correct notification object.
-
-11. If the object is valid, call notifyUser(); otherwise print an error message.
-
-12. Close the scanner after exiting the loop.
+Define a Notification interface with a method notifyUser().
+Implement three classes EmailNotification, SMSNotification, and PushNotification, each overriding notifyUser() with specific behavior.
+Define a NotificationFactory interface containing a method createNotification().
+Create an EmailFactory class implementing NotificationFactory that returns an EmailNotification object.
+Create an SMSFactory class implementing NotificationFactory that returns an SMSNotification object.
+Create a PushFactory class implementing NotificationFactory that returns a PushNotification object.
+In the main() method, read the notification type from the user.
+If the type is "email", create an EmailFactory object.
+If the type is "sms", create an SMSFactory object.
+If the type is "push", create a PushFactory object.
+If the input is "exit", terminate the loop.
+If the input is invalid, print an error message.
+Use the selected factory to create the appropriate Notification object.
+If the notification object is valid, call notifyUser().
+Continue reading input until "exit" is entered.
+Close the Scanner after exiting the loop.
 
 
 
@@ -46,10 +39,12 @@ RegisterNumber: 212224040016
 ```java
 import java.util.Scanner;
 
+// Product Interface
 interface Notification {
     void notifyUser();
 }
 
+// Concrete Products
 class EmailNotification implements Notification {
     public void notifyUser() {
         System.out.println("Sending Email Notification");
@@ -68,30 +63,63 @@ class PushNotification implements Notification {
     }
 }
 
-class NotificationFactory {
-    public Notification createNotification(String type) {
-        if (type == null) return null;
-        if (type.equalsIgnoreCase("email")) return new EmailNotification();
-        else if (type.equalsIgnoreCase("sms")) return new SMSNotification();
-        else if (type.equalsIgnoreCase("push")) return new PushNotification();
-        return null;
+// Abstract Factory
+interface NotificationFactory {
+    Notification createNotification();
+}
+
+// Concrete Factories
+class EmailFactory implements NotificationFactory {
+    public Notification createNotification() {
+        return new EmailNotification();
     }
 }
 
+class SMSFactory implements NotificationFactory {
+    public Notification createNotification() {
+        return new SMSNotification();
+    }
+}
+
+class PushFactory implements NotificationFactory {
+    public Notification createNotification() {
+        return new PushNotification();
+    }
+}
+
+// Main Class
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        NotificationFactory factory = new NotificationFactory();
+
         while (true) {
             String input = sc.nextLine();
-            if (input.equalsIgnoreCase("exit")) break;
-            Notification n = factory.createNotification(input);
-            if (n != null) n.notifyUser();
-            else System.out.println("Invalid notification type: " + input);
+
+            if (input.equalsIgnoreCase("exit"))
+                break;
+
+            NotificationFactory factory = null;
+
+            if (input.equalsIgnoreCase("email"))
+                factory = new EmailFactory();
+            else if (input.equalsIgnoreCase("sms"))
+                factory = new SMSFactory();
+            else if (input.equalsIgnoreCase("push"))
+                factory = new PushFactory();
+
+            if (factory != null) {
+                Notification n = factory.createNotification();
+                n.notifyUser();
+            } else {
+                System.out.println("Invalid notification type: " + input);
+            }
         }
+
         sc.close();
     }
 }
+```
+
 ```
 
 
